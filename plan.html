@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Guide To Japan – Plan Your Trip</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:opsz,wght@14..32,300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="planstyle.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo-area">
+        <span class="logo-text">Guide To Japan</span>
+    </div>
+    <div class="search-bar">
+        <span class="search-icon"><i class="fas fa-search"></i></span>
+        <input type="text" placeholder="Search destinations, guides...">
+    </div>
+    <div class="nav-utils">
+        <button class="icon-btn" aria-label="Messages"><i class="far fa-envelope"></i></button>
+        <button class="icon-btn" aria-label="Notifications"><i class="far fa-bell"></i></button>
+        <div class="user-avatar-small" title="MidnightShogun"></div>
+    </div>
+</header>
+
+<div class="layout-wrapper">
+    <aside class="main-sidebar">
+        <nav>
+            <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+            <a href="plan.html" class="nav-item active"><i class="fas fa-map-marked-alt"></i> Plans</a>
+            <a href="friends.html" class="nav-item"><i class="fas fa-user-friends"></i> Friends</a>
+            <a href="aboutus.html" class="nav-item"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="help.html" class="nav-item"><i class="fas fa-question-circle"></i> Help</a>
+            <a href="setting.html" class="nav-item"><i class="fas fa-sliders-h"></i> Settings</a>
+        </nav>
+    </aside>
+
+    <main class="planning-container">
+        <div class="planning-card">
+            <div class="planning-header">My Trip Planner</div>
+            <div class="planning-body">
+                <div class="planning-submenu">
+                    <button class="submenu-btn active" data-section="destination"><i class="fas fa-map-marker-alt"></i> Destination</button>
+                    <button class="submenu-btn" data-section="itinerary"><i class="fas fa-calendar-day"></i> Itinerary</button>
+                    <button class="submenu-btn" data-section="transport"><i class="fas fa-train"></i> Transportation</button>
+                    <button class="submenu-btn" data-section="accommodation"><i class="fas fa-hotel"></i> Accommodation</button>
+                    <button class="submenu-btn" data-section="contact"><i class="fas fa-phone-alt"></i> Contact</button>
+                </div>
+                
+                <div class="planning-content" id="planning-content">
+                    <div id="destination-panel" class="plan-panel active-panel">
+                        <h3><i class="fas fa-map-marked-alt"></i> Where are you going?</h3>
+                        <div class="form-group">
+                            <label>Destination city / region</label>
+                            <input type="text" id="dest-city" placeholder="e.g., Kyoto, Tokyo, Osaka">
+                        </div>
+                        <div class="form-group">
+                            <label>Travel dates</label>
+                            <div class="date-range">
+                                <input type="date" id="start-date"> to <input type="date" id="end-date">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Travel buddies (optional)</label>
+                            <input type="text" id="travel-buddies" placeholder="Names or group size">
+                        </div>
+                        <button class="save-btn" id="save-destination">Save Destination Info</button>
+                        <div class="saved-info" id="saved-destination"></div>
+                    </div>
+
+                    <div id="itinerary-panel" class="plan-panel">
+                        <h3><i class="fas fa-list-ul"></i> Daily Itinerary</h3>
+                        <div class="itinerary-form">
+                            <input type="text" id="day-title" placeholder="Day title (e.g., Day 1 – Arrival)">
+                            <textarea id="day-activities" rows="2" placeholder="Activities, sights, meals..."></textarea>
+                            <button id="add-itinerary-item" class="add-btn"><i class="fas fa-plus"></i> Add activity</button>
+                        </div>
+                        <ul id="itinerary-list" class="itinerary-list"></ul>
+                    </div>
+
+                    <div id="transport-panel" class="plan-panel">
+                        <h3><i class="fas fa-exchange-alt"></i> Getting around</h3>
+                        <div class="form-group">
+                            <label>Main transport method</label>
+                            <select id="transport-mode">
+                                <option value="train">Train / Shinkansen</option>
+                                <option value="bus">Highway Bus</option>
+                                <option value="car">Car Rental</option>
+                                <option value="plane">Domestic Flight</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Notes / Reservations</label>
+                            <textarea id="transport-notes" rows="2" placeholder="e.g., JR Pass activated, flight number..."></textarea>
+                        </div>
+                        <button id="save-transport" class="save-btn">Save transportation details</button>
+                        <div id="saved-transport" class="saved-info"></div>
+                    </div>
+
+                    <div id="accommodation-panel" class="plan-panel">
+                        <h3><i class="fas fa-bed"></i> Where to stay</h3>
+                        <div class="form-group">
+                            <label>Hotel / Ryokan name</label>
+                            <input type="text" id="accommodation-name" placeholder="e.g., The Gate Hotel">
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input type="text" id="accommodation-address" placeholder="District, city">
+                        </div>
+                        <div class="form-group">
+                            <label>Check-in / Check-out</label>
+                            <div class="date-range">
+                                <input type="date" id="checkin"> to <input type="date" id="checkout">
+                            </div>
+                        </div>
+                        <button id="save-accommodation" class="save-btn">Save accommodation</button>
+                        <div id="saved-accommodation" class="saved-info"></div>
+                    </div>
+
+                    <div id="contact-panel" class="plan-panel">
+                        <h3><i class="fas fa-address-book"></i> Emergency & Contacts</h3>
+                        <div class="form-group">
+                            <label>Emergency contact name</label>
+                            <input type="text" id="emergency-name">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone number</label>
+                            <input type="tel" id="emergency-phone">
+                        </div>
+                        <div class="form-group">
+                            <label>Local embassy / tourist police</label>
+                            <input type="text" id="local-help" placeholder="e.g., +81-xxx-xxx">
+                        </div>
+                        <button id="save-contacts" class="save-btn">Save contacts</button>
+                        <div id="saved-contacts" class="saved-info"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    let planData = {
+        destination: { city: "", start: "", end: "", buddies: "" },
+        itinerary: [],
+        transport: { mode: "train", notes: "" },
+        accommodation: { name: "", address: "", checkin: "", checkout: "" },
+        contact: { emergencyName: "", emergencyPhone: "", localHelp: "" }
+    };
+
+    function loadData() {
+        const saved = localStorage.getItem("guideToJapan_plan");
+        if (saved) {
+            planData = JSON.parse(saved);
+        }
+        renderAllPanels();
+    }
+
+    function saveToLocal() {
+        localStorage.setItem("guideToJapan_plan", JSON.stringify(planData));
+    }
+
+    function renderAllPanels() {
+        const destDiv = document.getElementById("saved-destination");
+        if (planData.destination.city) {
+            destDiv.innerHTML = `<strong>📍 Saved:</strong> ${planData.destination.city} (${planData.destination.start || "?"} to ${planData.destination.end || "?"})<br>👥 ${planData.destination.buddies || "No buddies specified"}`;
+        } else {
+            destDiv.innerHTML = "";
+        }
+        document.getElementById("dest-city").value = planData.destination.city;
+        document.getElementById("start-date").value = planData.destination.start;
+        document.getElementById("end-date").value = planData.destination.end;
+        document.getElementById("travel-buddies").value = planData.destination.buddies;
+
+        const itineraryList = document.getElementById("itinerary-list");
+        itineraryList.innerHTML = "";
+        planData.itinerary.forEach((item, idx) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<strong>${item.title}</strong><p>${item.activities}</p><button class="delete-itinerary" data-idx="${idx}"><i class="fas fa-trash"></i></button>`;
+            itineraryList.appendChild(li);
+        });
+        document.querySelectorAll(".delete-itinerary").forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                const idx = parseInt(btn.getAttribute("data-idx"));
+                planData.itinerary.splice(idx, 1);
+                saveToLocal();
+                renderAllPanels();
+            });
+        });
+
+        document.getElementById("transport-mode").value = planData.transport.mode;
+        document.getElementById("transport-notes").value = planData.transport.notes;
+        const transportDiv = document.getElementById("saved-transport");
+        if (planData.transport.mode || planData.transport.notes) {
+            transportDiv.innerHTML = `<strong>🚗 Transport:</strong> ${planData.transport.mode}<br>📝 ${planData.transport.notes || "No notes"}`;
+        } else transportDiv.innerHTML = "";
+
+        document.getElementById("accommodation-name").value = planData.accommodation.name;
+        document.getElementById("accommodation-address").value = planData.accommodation.address;
+        document.getElementById("checkin").value = planData.accommodation.checkin;
+        document.getElementById("checkout").value = planData.accommodation.checkout;
+        const accDiv = document.getElementById("saved-accommodation");
+        if (planData.accommodation.name) {
+            accDiv.innerHTML = `<strong>🏨 Stay:</strong> ${planData.accommodation.name}<br>📍 ${planData.accommodation.address}<br>📅 ${planData.accommodation.checkin} → ${planData.accommodation.checkout}`;
+        } else accDiv.innerHTML = "";
+
+        document.getElementById("emergency-name").value = planData.contact.emergencyName;
+        document.getElementById("emergency-phone").value = planData.contact.emergencyPhone;
+        document.getElementById("local-help").value = planData.contact.localHelp;
+        const contactDiv = document.getElementById("saved-contacts");
+        if (planData.contact.emergencyName) {
+            contactDiv.innerHTML = `<strong>📞 Emergency:</strong> ${planData.contact.emergencyName} (${planData.contact.emergencyPhone})<br>🆘 Local: ${planData.contact.localHelp || "—"}`;
+        } else contactDiv.innerHTML = "";
+    }
+
+    document.getElementById("save-destination").addEventListener("click", () => {
+        planData.destination.city = document.getElementById("dest-city").value;
+        planData.destination.start = document.getElementById("start-date").value;
+        planData.destination.end = document.getElementById("end-date").value;
+        planData.destination.buddies = document.getElementById("travel-buddies").value;
+        saveToLocal();
+        renderAllPanels();
+        alert("Destination saved!");
+    });
+
+    document.getElementById("add-itinerary-item").addEventListener("click", () => {
+        const title = document.getElementById("day-title").value.trim();
+        const acts = document.getElementById("day-activities").value.trim();
+        if (!title && !acts) return;
+        planData.itinerary.push({ title: title || "Untitled day", activities: acts || "No details" });
+        saveToLocal();
+        renderAllPanels();
+        document.getElementById("day-title").value = "";
+        document.getElementById("day-activities").value = "";
+    });
+
+    document.getElementById("save-transport").addEventListener("click", () => {
+        planData.transport.mode = document.getElementById("transport-mode").value;
+        planData.transport.notes = document.getElementById("transport-notes").value;
+        saveToLocal();
+        renderAllPanels();
+        alert("Transportation saved!");
+    });
+
+    document.getElementById("save-accommodation").addEventListener("click", () => {
+        planData.accommodation.name = document.getElementById("accommodation-name").value;
+        planData.accommodation.address = document.getElementById("accommodation-address").value;
+        planData.accommodation.checkin = document.getElementById("checkin").value;
+        planData.accommodation.checkout = document.getElementById("checkout").value;
+        saveToLocal();
+        renderAllPanels();
+        alert("Accommodation saved!");
+    });
+
+    document.getElementById("save-contacts").addEventListener("click", () => {
+        planData.contact.emergencyName = document.getElementById("emergency-name").value;
+        planData.contact.emergencyPhone = document.getElementById("emergency-phone").value;
+        planData.contact.localHelp = document.getElementById("local-help").value;
+        saveToLocal();
+        renderAllPanels();
+        alert("Contact info saved!");
+    });
+
+    const submenuBtns = document.querySelectorAll('.submenu-btn');
+    const panels = document.querySelectorAll('.plan-panel');
+    function switchPanel(panelId) {
+        panels.forEach(panel => panel.classList.remove('active-panel'));
+        const target = document.getElementById(`${panelId}-panel`);
+        if (target) target.classList.add('active-panel');
+        submenuBtns.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('data-section') === panelId) btn.classList.add('active');
+        });
+    }
+    submenuBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const section = btn.getAttribute('data-section');
+            switchPanel(section);
+        });
+    });
+    loadData();
+    switchPanel('destination');
+</script>
+</body>
+</html>

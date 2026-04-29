@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Settings - Guide To Japan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="settingstyle.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo-area">
+        <span class="logo-text">Guide To Japan</span>
+    </div>
+    <div class="search-bar">
+        <span class="search-icon"><i class="fas fa-search"></i></span>
+        <input type="text" placeholder="Search destinations, guides...">
+    </div>
+    <div class="nav-utils">
+        <button class="icon-btn" aria-label="Messages"><i class="far fa-envelope"></i></button>
+        <button class="icon-btn" aria-label="Notifications"><i class="far fa-bell"></i></button>
+        <div class="user-avatar-small" title="MidnightShogun"></div>
+    </div>
+</header>
+
+<div class="layout-wrapper">
+    <aside class="main-sidebar">
+        <nav>
+            <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+            <a href="plan.html" class="nav-item"><i class="fas fa-map-marked-alt"></i> Plans</a>
+            <a href="friends.html" class="nav-item"><i class="fas fa-user-friends"></i> Friends</a>
+            <a href="aboutus.html" class="nav-item"><i class="fas fa-info-circle"></i> About us</a>
+            <a href="help.html" class="nav-item"><i class="fas fa-question-circle"></i> Help</a>
+            <a href="setting.html" class="nav-item active"><i class="fas fa-sliders-h"></i> Settings</a>
+        </nav>
+    </aside>
+
+    <aside class="settings-sidebar">
+        <h2>Settings</h2>
+        <div class="settings-nav">
+            <button class="settings-btn active" data-panel="account">Account</button>
+            <button class="settings-btn" data-panel="privacy">Privacy</button>
+            <button class="settings-btn" data-panel="display">Display Settings</button>
+            <button class="settings-btn" data-panel="notification">Notification</button>
+        </div>
+    </aside>
+
+    <main class="settings-display dark-panel">
+        
+        <div id="account-panel" class="settings-card active-panel">
+            <h3><i class="fas fa-user-circle"></i> Account</h3>
+            <div class="setting-row">
+                <span class="label">Nickname:</span>
+                <span class="value">user1234</span>
+                <a href="#" class="update-link">Update</a>
+            </div>
+            <div class="setting-row">
+                <span class="label">ID:</span>
+                <span class="value">user_ep1234</span>
+                <a href="#" class="update-link">Update</a>
+            </div>
+            <div class="setting-row">
+                <span class="label">E-mail address:</span>
+                <span class="value">sampleUser123@gmail.com</span>
+                <a href="#" class="update-link">Update</a>
+            </div>
+            <div class="setting-row">
+                <span class="label">Password:</span>
+                <span class="value">********</span>
+                <a href="#" class="update-link">Update</a>
+            </div>
+            <div class="setting-row twofa">
+                <span class="label">Two-factor authentication:</span>
+                <span class="value">Disabled</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" class="toggle-input">
+                    <span class="toggle-slider"></span>
+                </label>
+                <a href="#" class="configure-link">Configure</a>
+            </div>
+        </div>
+
+        <div id="privacy-panel" class="settings-card">
+            <h3><i class="fas fa-lock"></i> Privacy</h3>
+            <div class="setting-group">
+                <p class="group-title">Who can message you:</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="message-permission" value="anyone"> Anyone</label>
+                    <label><input type="radio" name="message-permission" value="friends" checked> Friends</label>
+                    <label><input type="radio" name="message-permission" value="friends-except"> Friends Except...</label>
+                    <label><input type="radio" name="message-permission" value="custom"> Custom</label>
+                </div>
+            </div>
+            <div class="setting-group blocklist">
+                <p class="group-title">Blocklist</p>
+                <div class="blocklist-control">
+                    <span class="blocklist-placeholder">No blocked users yet.</span>
+                    <button class="manage-btn">Manage blocklist</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="display-panel" class="settings-card">
+            <h3><i class="fas fa-desktop"></i> Display settings</h3>
+            <div class="setting-group">
+                <p class="group-title">Explicit content</p>
+                <div class="toggle-row">
+                    <span>Display places that may contain sensitive content</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" class="toggle-input" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="toggle-row">
+                    <span>Show explicit content (R-18)</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" class="toggle-input">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="setting-group">
+                <p class="group-title">Blocked Reviews</p>
+                <div class="toggle-row">
+                    <span>Display blocked person's review  on most pages</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" class="toggle-input" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <small class="hint">You can choose to hide the person you blocked's review.</small>
+            </div>
+            <div class="setting-group">
+                <p class="group-title">traveling progress</p>
+                <div class="toggle-row">
+                    <span>Save traveling progress in japan</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" class="toggle-input" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <small class="hint">You can save the spot where you last stop.</small>
+            </div>
+        </div>
+
+        <div id="notification-panel" class="settings-card">
+            <h3><i class="fas fa-bell"></i> Notification</h3>
+            <div class="notify-category">
+                <p class="category-title">Account</p>
+                <div class="notify-row">
+                    <span>Someone followed you</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" class="toggle-input" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="notify-row">
+                    <span>Announcements from Guide To Japan</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" class="toggle-input" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="notify-category">
+                <p class="category-title">Request</p>
+                <div class="notify-row">
+                    <span>A user sent a Friend Request</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" class="toggle-input" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="notify-category">
+                <p class="category-title">Others</p>
+                <div class="notify-row">
+                    <span>Someone likes your review</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" class="toggle-input" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="notify-row">
+                    <span>Someone comments on your review</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" class="toggle-input" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<script>
+    const settingsBtns = document.querySelectorAll('.settings-btn');
+    const panels = document.querySelectorAll('.settings-card');
+
+    function switchPanel(panelId) {
+        panels.forEach(panel => {
+            panel.classList.remove('active-panel');
+        });
+        const activePanel = document.getElementById(`${panelId}-panel`);
+        if (activePanel) activePanel.classList.add('active-panel');
+
+        settingsBtns.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('data-panel') === panelId) {
+                btn.classList.add('active');
+            }
+        });
+    }
+
+    settingsBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const panelId = btn.getAttribute('data-panel');
+            if (panelId) switchPanel(panelId);
+        });
+    });
+
+    switchPanel('account');
+</script>
+
+</body>
+</html>

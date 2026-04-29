@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Guide To Japan – Help Center</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:opsz,wght@14..32,300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="helpstyle.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo-area">
+        <span class="logo-text">Guide To Japan</span>
+    </div>
+    <div class="search-bar">
+        <span class="search-icon"><i class="fas fa-search"></i></span>
+        <input type="text" placeholder="Search destinations, guides...">
+    </div>
+    <div class="nav-utils">
+        <button class="icon-btn" aria-label="Messages"><i class="far fa-envelope"></i></button>
+        <button class="icon-btn" aria-label="Notifications"><i class="far fa-bell"></i></button>
+        <div class="user-avatar-small" title="MidnightShogun"></div>
+    </div>
+</header>
+
+<div class="layout-wrapper">
+    <aside class="main-sidebar">
+        <nav>
+            <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+            <a href="plan.html" class="nav-item"><i class="fas fa-map-marked-alt"></i> Plans</a>
+            <a href="friends.html" class="nav-item"><i class="fas fa-user-friends"></i> Friends</a>
+            <a href="aboutus.html" class="nav-item"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="help.html" class="nav-item active"><i class="fas fa-question-circle"></i> Help</a>
+            <a href="setting.html" class="nav-item"><i class="fas fa-sliders-h"></i> Settings</a>
+        </nav>
+    </aside>
+
+    <main class="help-container">
+        <div class="help-header">
+            <h1><i class="fas fa-headset"></i> How can we help you?</h1>
+            <p>Find answers, manage your account, or get in touch with our support team.</p>
+        </div>
+
+        <div class="help-content">
+            <div class="faq-section">
+                <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I reset my password?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Go to <strong>Settings → Account</strong> and click "Update" next to your password. You'll receive a verification email to set a new password. Alternatively, use the "Forgot password" link on the login page.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How can I plan a trip with friends?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Navigate to the <strong>Plans</strong> tab, build your itinerary, and then use the "Share with friends" option inside the plan. Your friends can comment and suggest changes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are the subscription plans?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a free Basic plan with core features. Premium plans (Explorer, Wanderer) unlock offline maps, priority support, and exclusive travel guides. Check <strong>Settings → Subscription</strong> for details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I report inappropriate content?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Click the flag icon (🟨) on any post or comment. Our moderation team will review it within 24 hours. You can also email <strong>support@guidetojapan.com</strong> directly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I cancel my account?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Visit <strong>Settings → Account → Delete Account</strong>. You'll be asked to confirm your decision. Data deletion is permanent after 30 days of inactivity.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="support-section">
+                <div class="contact-card">
+                    <h3><i class="fas fa-envelope-open-text"></i> Contact Support</h3>
+                    <p>Our team is available 24/7. We'll get back to you within a few hours.</p>
+                    <form id="support-form">
+                        <input type="text" placeholder="Your email" required>
+                        <textarea rows="3" placeholder="Describe your issue..." required></textarea>
+                        <button type="submit"><i class="fas fa-paper-plane"></i> Send message</button>
+                    </form>
+                    <div class="alt-contact">
+                        <p><i class="fab fa-twitter"></i> @GuideToJapanHelp</p>
+                        <p><i class="fas fa-phone-alt"></i> +81 (0)3-1234-5678</p>
+                    </div>
+                </div>
+
+                <div class="resources-card">
+                    <h3><i class="fas fa-book"></i> Useful Resources</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-file-alt"></i> Getting Started Guide</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy & Safety</a></li>
+                        <li><a href="#"><i class="fas fa-users"></i> Community Guidelines</a></li>
+                        <li><a href="#"><i class="fas fa-mobile-alt"></i> Mobile App Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            faqItem.classList.toggle('open');
+        });
+    });
+
+    const supportForm = document.getElementById('support-form');
+    supportForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Your message has been sent! Our support team will reply soon.');
+        supportForm.reset();
+    });
+</script>
+</body>
+</html>

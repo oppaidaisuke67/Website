@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Guide To Japan – Friends</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:opsz,wght@14..32,300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="friendstyle.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo-area">
+        <span class="logo-text">Guide To Japan</span>
+    </div>
+    <div class="search-bar">
+        <span class="search-icon"><i class="fas fa-search"></i></span>
+        <input type="text" placeholder="Search for places or people">
+    </div>
+    <div class="nav-utils">
+        <button class="icon-btn" aria-label="Messages"><i class="far fa-envelope"></i></button>
+        <button class="icon-btn" aria-label="Notifications"><i class="far fa-bell"></i></button>
+        <div class="user-avatar-small" title="MidnightShogun"></div>
+    </div>
+</header>
+
+<div class="layout-wrapper">
+    <aside class="main-sidebar">
+        <nav>
+            <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Home</a>
+            <a href="plan.html" class="nav-item"><i class="fas fa-map-marked-alt"></i> Plans</a>
+            <a href="friends.html" class="nav-item active"><i class="fas fa-user-friends"></i> Friends</a>
+            <a href="aboutus.html" class="nav-item"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="help.html" class="nav-item"><i class="fas fa-question-circle"></i> Help</a>
+            <a href="setting.html" class="nav-item"><i class="fas fa-sliders-h"></i> Settings</a>
+        </nav>
+    </aside>
+
+    <main class="friends-container">
+        <div class="friends-main">
+            <div class="friends-header">
+                <h1><i class="fas fa-user-friends"></i> My Friends</h1>
+                <div class="friend-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Find a friend by name...">
+                </div>
+            </div>
+
+            <div class="pending-requests">
+                <h3>Pending Requests <span class="badge">2</span></h3>
+                <div class="request-list">
+                    <div class="request-item">
+                        <div class="req-avatar" style="background-image: url('https://randomuser.me/api/portraits/women/44.jpg');"></div>
+                        <div class="req-info">
+                            <span class="req-name">KyotoExplorer_99</span>
+                            <span class="req-mutual">3 mutual friends</span>
+                        </div>
+                        <div class="req-actions">
+                            <button class="accept-btn"><i class="fas fa-check"></i> Accept</button>
+                            <button class="decline-btn"><i class="fas fa-times"></i> Decline</button>
+                        </div>
+                    </div>
+                    <div class="request-item">
+                        <div class="req-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/55.jpg');"></div>
+                        <div class="req-info">
+                            <span class="req-name">OsakaDreamer</span>
+                            <span class="req-mutual">5 mutual friends</span>
+                        </div>
+                        <div class="req-actions">
+                            <button class="accept-btn"><i class="fas fa-check"></i> Accept</button>
+                            <button class="decline-btn"><i class="fas fa-times"></i> Decline</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="friends-section">
+                <h3>All Friends · <span>6 friends</span></h3>
+                <div class="friends-grid">
+                    <div class="friend-card">
+                        <div class="avatar-wrapper">
+                            <div class="avatar-circle online" style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg');"></div>
+                            <span class="status-dot online"></span>
+                        </div>
+                        <div class="friend-label">ZenWanderer</div>
+                        <div class="hover-actions">
+                            <button class="action-btn" title="Message"><i class="far fa-envelope"></i></button>
+                            <button class="action-btn" title="View Profile"><i class="far fa-user"></i></button>
+                        </div>
+                    </div>
+                    <div class="friend-card">
+                        <div class="avatar-wrapper">
+                            <div class="avatar-circle online" style="background-image: url('https://randomuser.me/api/portraits/men/22.jpg');"></div>
+                            <span class="status-dot online"></span>
+                        </div>
+                        <div class="friend-label">CrimsonTorii</div>
+                        <div class="hover-actions">
+                            <button class="action-btn"><i class="far fa-envelope"></i></button>
+                            <button class="action-btn"><i class="far fa-user"></i></button>
+                        </div>
+                    </div>
+                    <div class="friend-card">
+                        <div class="avatar-wrapper">
+                            <div class="avatar-circle offline" style="background-image: url('https://randomuser.me/api/portraits/men/41.jpg');"></div>
+                            <span class="status-dot offline"></span>
+                        </div>
+                        <div class="friend-label">PixelRonin</div>
+                        <div class="hover-actions">
+                            <button class="action-btn"><i class="far fa-envelope"></i></button>
+                            <button class="action-btn"><i class="far fa-user"></i></button>
+                        </div>
+                    </div>
+                    <div class="friend-card">
+                        <div class="avatar-wrapper">
+                            <div class="avatar-circle online" style="background-image: url('https://randomuser.me/api/portraits/women/68.jpg');"></div>
+                            <span class="status-dot online"></span>
+                        </div>
+                        <div class="friend-label">FujiExplorer</div>
+                        <div class="hover-actions">
+                            <button class="action-btn"><i class="far fa-envelope"></i></button>
+                            <button class="action-btn"><i class="far fa-user"></i></button>
+                        </div>
+                    </div>
+                    <div class="friend-card">
+                        <div class="avatar-wrapper">
+                            <div class="avatar-circle offline" style="background-image: url('https://randomuser.me/api/portraits/women/33.jpg');"></div>
+                            <span class="status-dot offline"></span>
+                        </div>
+                        <div class="friend-label">NeonKitsune</div>
+                        <div class="hover-actions">
+                            <button class="action-btn"><i class="far fa-envelope"></i></button>
+                            <button class="action-btn"><i class="far fa-user"></i></button>
+                        </div>
+                    </div>
+                    <div class="friend-card">
+                        <div class="avatar-wrapper">
+                            <div class="avatar-circle online" style="background-image: url('https://randomuser.me/api/portraits/men/97.jpg');"></div>
+                            <span class="status-dot online"></span>
+                        </div>
+                        <div class="friend-label">SakuraDrift</div>
+                        <div class="hover-actions">
+                            <button class="action-btn"><i class="far fa-envelope"></i></button>
+                            <button class="action-btn"><i class="far fa-user"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <aside class="suggestions-sidebar">
+            <h3><i class="fas fa-user-plus"></i> People You May Know</h3>
+            <div class="suggestion-list">
+                <div class="suggest-item">
+                    <div class="suggest-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/12.jpg');"></div>
+                    <div class="suggest-info">
+                        <span class="suggest-name">TokyoDrifter</span>
+                        <span class="suggest-mutual">4 mutual friends</span>
+                    </div>
+                    <button class="add-friend-btn"><i class="fas fa-user-plus"></i> Add</button>
+                </div>
+                <div class="suggest-item">
+                    <div class="suggest-avatar" style="background-image: url('https://randomuser.me/api/portraits/women/29.jpg');"></div>
+                    <div class="suggest-info">
+                        <span class="suggest-name">MatchaMochi</span>
+                        <span class="suggest-mutual">2 mutual friends</span>
+                    </div>
+                    <button class="add-friend-btn"><i class="fas fa-user-plus"></i> Add</button>
+                </div>
+                <div class="suggest-item">
+                    <div class="suggest-avatar" style="background-image: url('https://randomuser.me/api/portraits/men/77.jpg');"></div>
+                    <div class="suggest-info">
+                        <span class="suggest-name">ShrineWalker</span>
+                        <span class="suggest-mutual">7 mutual friends</span>
+                    </div>
+                    <button class="add-friend-btn"><i class="fas fa-user-plus"></i> Add</button>
+                </div>
+                <div class="suggest-item">
+                    <div class="suggest-avatar" style="background-image: url('https://randomuser.me/api/portraits/women/91.jpg');"></div>
+                    <div class="suggest-info">
+                        <span class="suggest-name">RamenRyder</span>
+                        <span class="suggest-mutual">1 mutual friend</span>
+                    </div>
+                    <button class="add-friend-btn"><i class="fas fa-user-plus"></i> Add</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+</div>
+
+</body>
+</html>
